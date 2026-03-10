@@ -5,3 +5,5 @@ pandas
 influxdb-client
 redis
 psycopg2-binary
+fastapi
+uvicorn

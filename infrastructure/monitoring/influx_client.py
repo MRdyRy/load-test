@@ -1,4 +1,5 @@
-from influxdb_client import InfluxDBClient, Point
+from influxdb_client.client.influxdb_client import InfluxDBClient
+from influxdb_client.client.write.point import Point
 from config.settings import settings
 
 class InfluxClient:
