@@ -1,0 +1,7 @@
+locust
+python-dotenv
+requests
+pandas
+influxdb-client
+redis
+psycopg2-binary
