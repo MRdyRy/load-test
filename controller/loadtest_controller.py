@@ -16,6 +16,7 @@ class LoadTestRequest(BaseModel):
 @app.post("/loadtest/run")
 def run_test(request: LoadTestRequest):
     logger.info("running load test for request %s", request)
+    print("running load test for request %s", request)
     run_load_test(
         scenario=request.scenario,
         users=request.users,

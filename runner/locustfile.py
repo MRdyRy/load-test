@@ -5,6 +5,7 @@ from adapter.api.service_client import ServiceClient
 from infrastructure.datasource.data_factory import get_datasource
 from tests.test_update_data_flow import TestUpdateDataFlow
 from config.settings import settings
+import infrastructure.monitoring.influx_client
 
 datasource = get_datasource()
 
@@ -35,6 +36,7 @@ class LoadTestUser(HttpUser):
             data = datasource.get_data()
 
             scenario = scenario_class(self.client,data)
+            scenario.run()
 
     # @task
     # def flow_update_data(self):
